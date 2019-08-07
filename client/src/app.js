@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
 
-import MainComp from './components/maincomp';
+import MainComp from './components/maincompcontainer';
 
 class App extends Component {
 	constructor(props) {
