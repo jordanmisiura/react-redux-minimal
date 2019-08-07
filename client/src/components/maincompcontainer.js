@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import MainComp from './maincomp';
+import { enableTestMode } from '../actions/testActions';
 
 const mapStateToProps = (state, ownProps) => {
     console.info("main comp map state to props: state: ",state,"  :  ownProps: ", ownProps);
@@ -8,7 +9,13 @@ const mapStateToProps = (state, ownProps) => {
     };
 };
 
-const mapDispatchToProps = () => ({});
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        testMode: (isEnabled) => {
+            return dispatch(enableTestMode(isEnabled));
+        }
+    }
+};
 
 const MainCompContainer = connect(
   mapStateToProps,

@@ -30,6 +30,8 @@ class MainComp extends Component {
 				channels: dataTest
 			});
 		});
+
+		this.props.testMode(true);
 	}
 
 	render() { 
