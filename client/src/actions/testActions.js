@@ -4,3 +4,10 @@ export function enableTestMode(isEnable = false) {
       isEnable
     };
 }
+
+export function setData(data) {
+    return {
+      type: 'UPDATE_DATA',
+      data
+    };
+}
